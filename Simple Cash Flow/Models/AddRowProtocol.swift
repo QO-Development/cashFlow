@@ -9,5 +9,5 @@
 import Foundation
 
 protocol AddRowDelegate {
-    func UpdateNewRowData(id: Int64, date: String, description: String, flow: Double, total: Double)
+    func UpdateNewRowData(mode: RowMode, row: FlowRow)
 } 

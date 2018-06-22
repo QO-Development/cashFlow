@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rj7-Z3-l6b">
-                                <rect key="frame" x="0.0" y="64" width="375" height="563"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.94117647059999998" green="0.35686274509999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CashFlowTableViewCell" rowHeight="97" id="Ziu-7P-DuU" customClass="CashFlowTableViewCell" customModule="Simple_Cash_Flow" customModuleProvider="target">
@@ -76,11 +76,11 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mK4-0w-yLp">
-                                <rect key="frame" x="172" y="627" width="30" height="30"/>
-                                <color key="backgroundColor" red="0.94117647059999998" green="0.35686274509999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="164.5" y="612" width="45" height="45"/>
+                                <color key="backgroundColor" red="0.050980392159999999" green="0.78823529410000004" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="OWk-o5-AYy"/>
-                                    <constraint firstAttribute="width" constant="30" id="mSb-wd-ZUw"/>
+                                    <constraint firstAttribute="height" constant="45" id="OWk-o5-AYy"/>
+                                    <constraint firstAttribute="width" constant="45" id="mSb-wd-ZUw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="27"/>
                                 <state key="normal" title="+"/>
@@ -92,7 +92,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mK4-0w-yLp" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" constant="-10" id="CaF-bC-ZQo"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="rj7-Z3-l6b" secondAttribute="bottom" constant="40" id="OlK-dh-ibt"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="rj7-Z3-l6b" secondAttribute="bottom" id="OlK-dh-ibt"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="rj7-Z3-l6b" secondAttribute="trailing" id="R5s-RY-WUc"/>
                             <constraint firstItem="mK4-0w-yLp" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="WOf-vb-ljz"/>
                             <constraint firstItem="rj7-Z3-l6b" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="WS3-Z6-k8g"/>
@@ -102,6 +102,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Z6r-Du-kDE"/>
                     <connections>
+                        <outlet property="addItemButton" destination="mK4-0w-yLp" id="zX5-n4-a4A"/>
                         <outlet property="tableView" destination="rj7-Z3-l6b" id="iSS-mX-dj1"/>
                     </connections>
                 </viewController>
@@ -117,44 +118,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="taw-3R-cyV">
-                                <rect key="frame" x="87" y="112" width="200" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="taw-3R-cyV">
+                                <rect key="frame" x="15" y="45" width="345" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FJO-5q-oZM">
-                                <rect key="frame" x="87" y="383" width="200" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FJO-5q-oZM">
+                                <rect key="frame" x="15" y="155" width="345" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EoP-pC-0sn">
-                                <rect key="frame" x="156" y="481" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EoP-pC-0sn">
+                                <rect key="frame" x="50" y="245" width="275" height="50"/>
                                 <color key="backgroundColor" red="0.82352941180000006" green="0.34901960780000002" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zcH-rp-jFQ"/>
+                                </constraints>
                                 <state key="normal" title="Add Item"/>
                                 <connections>
                                     <action selector="addItemPressed" destination="akL-8I-nZz" eventType="touchUpInside" id="0eY-ME-e7k"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sh3-c1-PaD">
-                                <rect key="frame" x="87" y="262" width="200" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sh3-c1-PaD">
+                                <rect key="frame" x="15" y="100" width="345" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DYz-yK-bTI" firstAttribute="trailing" secondItem="taw-3R-cyV" secondAttribute="trailing" constant="15" id="1bK-2w-Frp"/>
+                            <constraint firstItem="taw-3R-cyV" firstAttribute="top" secondItem="DYz-yK-bTI" secondAttribute="top" constant="25" id="6WW-Yz-YhW"/>
+                            <constraint firstItem="taw-3R-cyV" firstAttribute="leading" secondItem="DYz-yK-bTI" secondAttribute="leading" constant="15" id="8Br-yH-2ph"/>
+                            <constraint firstItem="Sh3-c1-PaD" firstAttribute="leading" secondItem="DYz-yK-bTI" secondAttribute="leading" constant="15" id="C58-3H-RYm"/>
+                            <constraint firstItem="DYz-yK-bTI" firstAttribute="trailing" secondItem="Sh3-c1-PaD" secondAttribute="trailing" constant="15" id="GV1-Lf-3yx"/>
+                            <constraint firstItem="FJO-5q-oZM" firstAttribute="top" secondItem="Sh3-c1-PaD" secondAttribute="bottom" constant="25" id="HoB-9d-VI6"/>
+                            <constraint firstItem="DYz-yK-bTI" firstAttribute="trailing" secondItem="FJO-5q-oZM" secondAttribute="trailing" constant="15" id="JeY-qX-sAJ"/>
+                            <constraint firstItem="DYz-yK-bTI" firstAttribute="trailing" secondItem="EoP-pC-0sn" secondAttribute="trailing" constant="50" id="Pb1-yz-T6y"/>
+                            <constraint firstItem="EoP-pC-0sn" firstAttribute="leading" secondItem="DYz-yK-bTI" secondAttribute="leading" constant="50" id="SnU-xH-sVt"/>
+                            <constraint firstItem="Sh3-c1-PaD" firstAttribute="top" secondItem="taw-3R-cyV" secondAttribute="bottom" constant="25" id="aO0-Ai-Fgp"/>
+                            <constraint firstItem="EoP-pC-0sn" firstAttribute="top" secondItem="FJO-5q-oZM" secondAttribute="bottom" constant="60" id="b5J-fl-kBn"/>
+                            <constraint firstItem="FJO-5q-oZM" firstAttribute="leading" secondItem="DYz-yK-bTI" secondAttribute="leading" constant="15" id="klv-eS-Jyw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DYz-yK-bTI"/>
                     </view>
                     <connections>
                         <outlet property="dateField" destination="taw-3R-cyV" id="GDc-4m-dfD"/>
                         <outlet property="descriptionField" destination="Sh3-c1-PaD" id="Q27-Ex-NJL"/>
                         <outlet property="flowField" destination="FJO-5q-oZM" id="IA8-UC-vK2"/>
+                        <outlet property="itemButton" destination="EoP-pC-0sn" id="iYe-nU-fRa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZeO-Xx-F73" userLabel="First Responder" sceneMemberID="firstResponder"/>

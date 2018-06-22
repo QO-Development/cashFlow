@@ -96,18 +96,14 @@
 		46006EE820DB176B005E535E /* Simple Cash Flow */ = {
 			isa = PBXGroup;
 			children = (
-				46006F1620DCB525005E535E /* Views */,
-				46006F1320DC4137005E535E /* Models */,
 				46006EE920DB176B005E535E /* AppDelegate.swift */,
-				46006EEB20DB176B005E535E /* FirstViewController.swift */,
-				46006F0D20DB1E06005E535E /* FlowRow.swift */,
-				46006F0B20DB188A005E535E /* CashFlowTableViewCell.swift */,
+				46006F1320DC4137005E535E /* Models */,
+				46006F1620DCB525005E535E /* Views */,
+				46006F1920DCB875005E535E /* ViewControllers */,
 				46006EEF20DB176B005E535E /* Main.storyboard */,
 				46006EF220DB176D005E535E /* Assets.xcassets */,
 				46006EF420DB176D005E535E /* LaunchScreen.storyboard */,
 				46006EF720DB176D005E535E /* Info.plist */,
-				46006F0F20DB7EEF005E535E /* AddRowViewController.swift */,
-				46006F1120DB8138005E535E /* AddRowProtocol.swift */,
 			);
 			path = "Simple Cash Flow";
 			sourceTree = "<group>";
@@ -124,6 +120,8 @@
 		46006F1320DC4137005E535E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				46006F1120DB8138005E535E /* AddRowProtocol.swift */,
+				46006F0D20DB1E06005E535E /* FlowRow.swift */,
 				46006F1420DC4153005E535E /* Database.swift */,
 			);
 			path = Models;
@@ -132,9 +130,19 @@
 		46006F1620DCB525005E535E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				46006F0B20DB188A005E535E /* CashFlowTableViewCell.swift */,
 				46006F1720DCB541005E535E /* ColorPalette.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		46006F1920DCB875005E535E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				46006EEB20DB176B005E535E /* FirstViewController.swift */,
+				46006F0F20DB7EEF005E535E /* AddRowViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		B78B7CC515DD5CC2DB9119DF /* Pods */ = {

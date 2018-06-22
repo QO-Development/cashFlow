@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16AEDC5A60E83D1651D0AAF1 /* Pods_Simple_Cash_Flow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B90E44E1E39C237816880F /* Pods_Simple_Cash_Flow.framework */; };
+		46006EEA20DB176B005E535E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46006EE920DB176B005E535E /* AppDelegate.swift */; };
+		46006EEC20DB176B005E535E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46006EEB20DB176B005E535E /* FirstViewController.swift */; };
+		46006EF120DB176B005E535E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46006EEF20DB176B005E535E /* Main.storyboard */; };
+		46006EF320DB176D005E535E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46006EF220DB176D005E535E /* Assets.xcassets */; };
+		46006EF620DB176D005E535E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46006EF420DB176D005E535E /* LaunchScreen.storyboard */; };
+		46006F0120DB176D005E535E /* Simple_Cash_FlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46006F0020DB176D005E535E /* Simple_Cash_FlowTests.swift */; };
+		46006F0C20DB188A005E535E /* CashFlowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46006F0B20DB188A005E535E /* CashFlowTableViewCell.swift */; };
+		46006F0E20DB1E07005E535E /* FlowRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46006F0D20DB1E06005E535E /* FlowRow.swift */; };
+		46006F1020DB7EEF005E535E /* AddRowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46006F0F20DB7EEF005E535E /* AddRowViewController.swift */; };
+		46006F1220DB8138005E535E /* AddRowProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46006F1120DB8138005E535E /* AddRowProtocol.swift */; };
+		46006F1520DC4153005E535E /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46006F1420DC4153005E535E /* Database.swift */; };
+		46006F1820DCB541005E535E /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46006F1720DCB541005E535E /* ColorPalette.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46006EFD20DB176D005E535E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46006EDE20DB176B005E535E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46006EE520DB176B005E535E;
+			remoteInfo = "Simple Cash Flow";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		077C1D6A3465E0F9300BCEFE /* Pods-Simple Cash Flow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Cash Flow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simple Cash Flow/Pods-Simple Cash Flow.release.xcconfig"; sourceTree = "<group>"; };
+		18DACA2E8E1174425B2C18E7 /* Pods-Simple Cash Flow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Cash Flow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Simple Cash Flow/Pods-Simple Cash Flow.debug.xcconfig"; sourceTree = "<group>"; };
+		21B90E44E1E39C237816880F /* Pods_Simple_Cash_Flow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simple_Cash_Flow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46006EE620DB176B005E535E /* Simple Cash Flow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Cash Flow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46006EE920DB176B005E535E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		46006EEB20DB176B005E535E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		46006EF020DB176B005E535E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		46006EF220DB176D005E535E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46006EF520DB176D005E535E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		46006EF720DB176D005E535E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46006EFC20DB176D005E535E /* Simple Cash FlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple Cash FlowTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46006F0020DB176D005E535E /* Simple_Cash_FlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Cash_FlowTests.swift; sourceTree = "<group>"; };
+		46006F0220DB176D005E535E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46006F0B20DB188A005E535E /* CashFlowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashFlowTableViewCell.swift; sourceTree = "<group>"; };
+		46006F0D20DB1E06005E535E /* FlowRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowRow.swift; sourceTree = "<group>"; };
+		46006F0F20DB7EEF005E535E /* AddRowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRowViewController.swift; sourceTree = "<group>"; };
+		46006F1120DB8138005E535E /* AddRowProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRowProtocol.swift; sourceTree = "<group>"; };
+		46006F1420DC4153005E535E /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		46006F1720DCB541005E535E /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46006EE320DB176B005E535E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16AEDC5A60E83D1651D0AAF1 /* Pods_Simple_Cash_Flow.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46006EF920DB176D005E535E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46006EDD20DB176B005E535E = {
+			isa = PBXGroup;
+			children = (
+				46006EE820DB176B005E535E /* Simple Cash Flow */,
+				46006EFF20DB176D005E535E /* Simple Cash FlowTests */,
+				46006EE720DB176B005E535E /* Products */,
+				B78B7CC515DD5CC2DB9119DF /* Pods */,
+				D19B62EC166F9DD76F82EB1C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		46006EE720DB176B005E535E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46006EE620DB176B005E535E /* Simple Cash Flow.app */,
+				46006EFC20DB176D005E535E /* Simple Cash FlowTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46006EE820DB176B005E535E /* Simple Cash Flow */ = {
+			isa = PBXGroup;
+			children = (
+				46006F1620DCB525005E535E /* Views */,
+				46006F1320DC4137005E535E /* Models */,
+				46006EE920DB176B005E535E /* AppDelegate.swift */,
+				46006EEB20DB176B005E535E /* FirstViewController.swift */,
+				46006F0D20DB1E06005E535E /* FlowRow.swift */,
+				46006F0B20DB188A005E535E /* CashFlowTableViewCell.swift */,
+				46006EEF20DB176B005E535E /* Main.storyboard */,
+				46006EF220DB176D005E535E /* Assets.xcassets */,
+				46006EF420DB176D005E535E /* LaunchScreen.storyboard */,
+				46006EF720DB176D005E535E /* Info.plist */,
+				46006F0F20DB7EEF005E535E /* AddRowViewController.swift */,
+				46006F1120DB8138005E535E /* AddRowProtocol.swift */,
+			);
+			path = "Simple Cash Flow";
+			sourceTree = "<group>";
+		};
+		46006EFF20DB176D005E535E /* Simple Cash FlowTests */ = {
+			isa = PBXGroup;
+			children = (
+				46006F0020DB176D005E535E /* Simple_Cash_FlowTests.swift */,
+				46006F0220DB176D005E535E /* Info.plist */,
+			);
+			path = "Simple Cash FlowTests";
+			sourceTree = "<group>";
+		};
+		46006F1320DC4137005E535E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				46006F1420DC4153005E535E /* Database.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		46006F1620DCB525005E535E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				46006F1720DCB541005E535E /* ColorPalette.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B78B7CC515DD5CC2DB9119DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18DACA2E8E1174425B2C18E7 /* Pods-Simple Cash Flow.debug.xcconfig */,
+				077C1D6A3465E0F9300BCEFE /* Pods-Simple Cash Flow.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D19B62EC166F9DD76F82EB1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21B90E44E1E39C237816880F /* Pods_Simple_Cash_Flow.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46006EE520DB176B005E535E /* Simple Cash Flow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46006F0520DB176D005E535E /* Build configuration list for PBXNativeTarget "Simple Cash Flow" */;
+			buildPhases = (
+				62E799C6BB3483B789996B76 /* [CP] Check Pods Manifest.lock */,
+				46006EE220DB176B005E535E /* Sources */,
+				46006EE320DB176B005E535E /* Frameworks */,
+				46006EE420DB176B005E535E /* Resources */,
+				5A6231579F23C9A5F2436062 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Simple Cash Flow";
+			productName = "Simple Cash Flow";
+			productReference = 46006EE620DB176B005E535E /* Simple Cash Flow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		46006EFB20DB176D005E535E /* Simple Cash FlowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46006F0820DB176D005E535E /* Build configuration list for PBXNativeTarget "Simple Cash FlowTests" */;
+			buildPhases = (
+				46006EF820DB176D005E535E /* Sources */,
+				46006EF920DB176D005E535E /* Frameworks */,
+				46006EFA20DB176D005E535E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46006EFE20DB176D005E535E /* PBXTargetDependency */,
+			);
+			name = "Simple Cash FlowTests";
+			productName = "Simple Cash FlowTests";
+			productReference = 46006EFC20DB176D005E535E /* Simple Cash FlowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46006EDE20DB176B005E535E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Hawthorne Applications";
+				TargetAttributes = {
+					46006EE520DB176B005E535E = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					46006EFB20DB176D005E535E = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 46006EE520DB176B005E535E;
+					};
+				};
+			};
+			buildConfigurationList = 46006EE120DB176B005E535E /* Build configuration list for PBXProject "Simple Cash Flow" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 46006EDD20DB176B005E535E;
+			productRefGroup = 46006EE720DB176B005E535E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46006EE520DB176B005E535E /* Simple Cash Flow */,
+				46006EFB20DB176D005E535E /* Simple Cash FlowTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46006EE420DB176B005E535E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46006EF620DB176D005E535E /* LaunchScreen.storyboard in Resources */,
+				46006EF320DB176D005E535E /* Assets.xcassets in Resources */,
+				46006EF120DB176B005E535E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46006EFA20DB176D005E535E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5A6231579F23C9A5F2436062 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Simple Cash Flow/Pods-Simple Cash Flow-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Simple Cash Flow/Pods-Simple Cash Flow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62E799C6BB3483B789996B76 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Simple Cash Flow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46006EE220DB176B005E535E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46006F0E20DB1E07005E535E /* FlowRow.swift in Sources */,
+				46006F0C20DB188A005E535E /* CashFlowTableViewCell.swift in Sources */,
+				46006F1220DB8138005E535E /* AddRowProtocol.swift in Sources */,
+				46006F1820DCB541005E535E /* ColorPalette.swift in Sources */,
+				46006EEA20DB176B005E535E /* AppDelegate.swift in Sources */,
+				46006EEC20DB176B005E535E /* FirstViewController.swift in Sources */,
+				46006F1520DC4153005E535E /* Database.swift in Sources */,
+				46006F1020DB7EEF005E535E /* AddRowViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46006EF820DB176D005E535E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46006F0120DB176D005E535E /* Simple_Cash_FlowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46006EFE20DB176D005E535E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46006EE520DB176B005E535E /* Simple Cash Flow */;
+			targetProxy = 46006EFD20DB176D005E535E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		46006EEF20DB176B005E535E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46006EF020DB176B005E535E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		46006EF420DB176D005E535E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46006EF520DB176D005E535E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46006F0320DB176D005E535E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		46006F0420DB176D005E535E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46006F0620DB176D005E535E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18DACA2E8E1174425B2C18E7 /* Pods-Simple Cash Flow.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73HK59FK3R;
+				INFOPLIST_FILE = "Simple Cash Flow/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.todayte.Simple-Cash-Flow";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46006F0720DB176D005E535E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 077C1D6A3465E0F9300BCEFE /* Pods-Simple Cash Flow.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73HK59FK3R;
+				INFOPLIST_FILE = "Simple Cash Flow/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.todayte.Simple-Cash-Flow";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		46006F0920DB176D005E535E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73HK59FK3R;
+				INFOPLIST_FILE = "Simple Cash FlowTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.todayte.Simple-Cash-FlowTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simple Cash Flow.app/Simple Cash Flow";
+			};
+			name = Debug;
+		};
+		46006F0A20DB176D005E535E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73HK59FK3R;
+				INFOPLIST_FILE = "Simple Cash FlowTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.todayte.Simple-Cash-FlowTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simple Cash Flow.app/Simple Cash Flow";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46006EE120DB176B005E535E /* Build configuration list for PBXProject "Simple Cash Flow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46006F0320DB176D005E535E /* Debug */,
+				46006F0420DB176D005E535E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46006F0520DB176D005E535E /* Build configuration list for PBXNativeTarget "Simple Cash Flow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46006F0620DB176D005E535E /* Debug */,
+				46006F0720DB176D005E535E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46006F0820DB176D005E535E /* Build configuration list for PBXNativeTarget "Simple Cash FlowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46006F0920DB176D005E535E /* Debug */,
+				46006F0A20DB176D005E535E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46006EDE20DB176B005E535E /* Project object */;
+}

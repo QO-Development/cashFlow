@@ -43,7 +43,7 @@ struct FlowRow {
     
     var longDateString: String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yy"
+        dateFormatter.dateFormat = "MM/dd/yyyy"
         dateFormatter.locale = Locale(identifier: "en_US")
         return dateFormatter.string(from: self.date)
     }

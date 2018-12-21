@@ -26,13 +26,13 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
         
-        self.db.sortRows()
+        self.db.sortRowsAndComputeTotals()
         self.tableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        //Do any additional setup after loading the view, typically from a nib.
         
         self.title = "Simple Cash Flow"
         self.tableView.backgroundColor = UIColor.Ca$h.purple
@@ -43,13 +43,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
-        
-        
-        let tableHeader = UILabel()
-        tableHeader.backgroundColor = UIColor.Ca$h.greyishPurple
-        tableHeader.text = "Sup B"
-        tableHeader.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50.0)
-        self.tableView.tableHeaderView = tableHeader
         
         navigationController?.navigationBar.barTintColor = UIColor.Ca$h.darkPurple
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
@@ -98,12 +91,15 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "CashFlowTableViewCell", for: indexPath) as! CashFlowTableViewCell
         
         let fr = self.db.rows[indexPath.row]
-        
         cell.dateLabel.text = fr.shortDateString
-        
         cell.descriptionLabel.text = fr.description
-        
         cell.cashLabel.text = String(format: "$%.2f", fr.flowAmount)
+        cell.totalLabel.text = String(format: "$%.2f", fr.total)
+        if fr.total < 0 {
+            cell.totalLabel.textColor = UIColor.red
+        } else {
+            cell.totalLabel.textColor = UIColor.black
+        }
         
         switch fr.type {
         case .Inflow:
@@ -112,19 +108,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell.cashLabel.textColor = UIColor.red
         }
         
-        //TODO: Compute the totals in a more sensible way. Don't rely on the UI. Could probably sort the rows based on date in the model, then compute total from there
         //TODO: Create headers for each month in the table
-        
-        if indexPath.row == 0 {
-            cell.totalLabel.text = String(format: "$%.2f", fr.flowAmount)
-            self.db.rows[indexPath.row].total = fr.flowAmount
-        } else {
-            //Total = previous total +- cash inflow/outflow
-            let total = self.db.rows[indexPath.row - 1].total + fr.flowAmount
-            
-            self.db.rows[indexPath.row].total = total
-            cell.totalLabel.text = String(format: "$%.2f", total)
-        }
         
         return cell
     }
@@ -145,6 +129,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             db.deleteFlowFromDatabase(flow: rowToDelete)
             
             self.tableView.deleteRows(at: [indexPath], with: .fade)
+            self.db.sortRowsAndComputeTotals()
             self.tableView.reloadData()
         }
     }

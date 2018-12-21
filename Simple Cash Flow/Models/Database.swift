@@ -38,6 +38,9 @@ class Database {
         //Get the cash flows data and append it to rows
         self.rows = self.selectAllCashFlows()
         
+        //Sort everything and compute the totals
+        self.sortRowsAndComputeTotals()
+        
     }
         
     func getConnection() {
@@ -57,7 +60,6 @@ class Database {
         let row = cashFlowsTable.filter(idColumn == fr.id)
         
         do {
-            print("Hi")
             try self.connection?.run(row.update(dateColumn <- fr.longDateString, descriptionColumn <- fr.description, flowAmountColumn <- fr.flowAmount))
         } catch {
             print("Unable to update database")
@@ -130,6 +132,8 @@ class Database {
                     rows.append(row)
                 } else {
                     //If the date can't be converted properly, just use the current date
+                    print("Cannot convert date")
+                
                     let row = FlowRow(id: rowId, date: Date(), description: desc, total: 0.0, flowAmount: flowAm)
                     rows.append(row)
                 }
@@ -139,12 +143,12 @@ class Database {
             print(error)
         }
         
-        self.sortRows()
+        self.sortRowsAndComputeTotals()
         
         return rows
     }
     
-    func sortRows() {
+    func sortRowsAndComputeTotals() {
         //Sort the rows in place according to date
         rows.sort() {
             (flowRow1, flowRow2) in
@@ -153,6 +157,17 @@ class Database {
                 return true
             } else {
                 return false
+            }
+        }
+        
+        for i in 0..<rows.count {
+            if i == 0 {
+                rows[i].total = rows[i].flowAmount
+                //print("\(i) : \(rows[i].unixTimeStamp)")
+            } else {
+                //Total = previous total +- cash inflow/outflow
+                rows[i].total = rows[i - 1].total + rows[i].flowAmount
+                //print("\(i) : \(rows[i].unixTimeStamp)")
             }
         }
     }

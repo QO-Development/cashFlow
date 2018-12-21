@@ -58,8 +58,6 @@ class AddRowViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func addItemPressed() {
         
-        print("Pressed")
-        
         guard let dateString = dateField.text else {
             print("No dateString")
             return
